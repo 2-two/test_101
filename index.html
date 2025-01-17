@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Femur Landmarks and Planes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Style -->
+    <link rel="stylesheet" href="index.css" />
+    <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.163.0/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@0.163.0/examples/jsm/"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="heading">
+      <h1>Femur Landmarks and Planes</h1>
+      <div class="border"></div>
+    </div>
+
+    <!-- landmarks lets go  -->
+    <div id="gui">
+      <div class="buttons">
+        <button class="landmark-btn" id="femurCenterBtn">Femur Center</button>
+        <button class="landmark-btn" id="hipCenterBtn">Hip Center</button>
+        <button class="landmark-btn" id="femurProximalCanalBtn">Femur Proximal Canal</button>
+        <button class="landmark-btn" id="femurDistalCanalBtn">Femur Distal Canal</button>
+        <button class="landmark-btn" id="medialEpicondyleBtn">Medial Epicondyle</button>
+        <button class="landmark-btn" id="lateralEpicondyleBtn">Lateral Epicondyle</button>
+        <button class="landmark-btn" id="distalMedialPtBtn">Distal Medial Pt</button>
+        <button class="landmark-btn" id="distalLateralPtBtn">Distal Lateral Pt</button>
+        <button class="landmark-btn" id="posteriorMedialPtBtn">Posterior Medial Pt</button>
+        <button class="landmark-btn" id="posteriorLateralPtBtn">Posterior Lateral Pt</button>
+        <button class="landmark-btn" id="updateBtn">Update</button>
+        <button class="landmark-btn" id="processBtn" disabled>Process</button>
+      </div>
+    </div>
+
+    <!-- contin opacity and back -->
+    <div id="bottomControls">
+      <div id="opacitySliderContainer">
+        <label for="opacitySlider">Femur Opacity:</label>
+        <input type="range" id="opacitySlider" min="0" max="1" step="0.01" value="0.8">
+      </div>
+      <button class="back-btn" id="backBtn" style="display: none;">Confirm</button>
+    </div>
+
+    <!-- Rotate them planes -->
+    <div id="rotationControls">
+      <!-- Varus Rotation-->
+      <div class="rotation-set">
+        <span class="rotation-label">Varus/Valgus</span>
+        <div class="rotation-buttons">
+          <button class="rotate-plus" id="rotatePlusVarusValgus">+</button>
+          <span class="rotation-degree" id="rotationDegreeVarusValgus">0°</span>
+          <button class="rotate-minus" id="rotateMinusVarusValgus">-</button>
+        </div>
+      </div>
+
+      <!-- Flexion Rotation -->
+      <div class="rotation-set">
+        <span class="rotation-label">Flexion/Extension</span>
+        <div class="rotation-buttons">
+          <button class="rotate-plus" id="rotatePlusFlexionExtension">+</button>
+          <span class="rotation-degree" id="rotationDegreeFlexionExtension">0°</span>
+          <button class="rotate-minus" id="rotateMinusFlexionExtension">-</button>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>

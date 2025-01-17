@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+  position: relative;
+}
+
+#heading {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 1000;
+}
+
+#heading h1 {
+  font-size: 24px;
+  color: #333;
+}
+
+#heading .border {
+  width: 100px;
+  height: 4px;
+  background-color: #333;
+  margin: 5px auto 0;
+}
+
+#gui {
+  position: absolute;
+  top: 60px;
+  left: 20px;
+  z-index: 999;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.landmark-btn {
+  padding: 10px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  background-color: #007BFF;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.landmark-btn:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+.landmark-btn:disabled {
+  background-color: #999;
+  cursor: not-allowed;
+}
+
+.landmark-btn.active {
+  background-color: #28a745;
+}
+
+#bottomControls {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 10px 15px;
+  border-radius: 8px;
+}
+
+#opacitySliderContainer {
+  display: flex;
+  align-items: center;
+}
+
+#opacitySliderContainer label {
+  margin-right: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+#opacitySlider {
+  width: 150px;
+}
+
+.back-btn {
+  padding: 10px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  background-color: #6c757d;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.back-btn:hover {
+  background-color: #5a6268;
+}
+
+#rotationControls {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  z-index: 999;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 200px;
+}
+
+.rotation-set {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rotation-label {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 1em;
+  text-align: center;
+}
+
+.rotation-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.rotate-plus, .rotate-minus {
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  cursor: pointer;
+  border: 1px solid #888;
+  border-radius: 50%;
+  background-color: #ccc;
+  transition: background-color 0.3s;
+}
+
+.rotate-plus:hover:not(:disabled), .rotate-minus:hover:not(:disabled) {
+  background-color: #bbb;
+}
+
+.rotate-plus:disabled, .rotate-minus:disabled {
+  background-color: #999;
+  cursor: not-allowed;
+}
+
+.rotation-degree {
+  font-size: 1.2em;
+  font-weight: bold;
+  width: 50px;
+  text-align: center;
+}
